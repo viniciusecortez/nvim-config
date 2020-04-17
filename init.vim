@@ -4,8 +4,8 @@ set mouse=a
 set inccommand=split
 
 let mapleader="\<space>"
-nnoremap <leader>vs :vsplit
-
+" Mudança nos posicionamentos
+ 
 
 
 "Colocando plugins
@@ -15,23 +15,35 @@ call plug#begin()
 	Plug 'sheerun/vim-polyglot'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
-	Plug 'roxma/nvim-completion-manager'
+	Plug 'ncm2/ncm2' 
+	Plug 'roxma/nvim-yarp'
 	Plug 'dense-analysis/ale'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'preservim/nerdcommenter'
-	Plug 'airblade/vim-gitgutter'
+	Plug 'brookhong/dbgpavim'
+	Plug '907th/vim-auto-save'
+	Plug 'scrooloose/nerdtree'
 call plug#end()
 
 "Config gruv box"
 colorscheme gruvbox
 set background=dark
 
-" Config de pesquisa
-nnoremap <c-p> :Files <er>
-nnoremap <c-s-i> <c-v>
-"Criado para facilitar os dois pontos
-"...
+" Adicionando vertical split :
+nnoremap <C-W>v :vsplit 
+nnoremap <C-W>s :split
 
+" Pesquisa :
+nnoremap <c-p> :Files<cr>
+nnoremap <leader><c-p> :Ag<cr> 
+
+"Salvamento :
+nnoremap <C-S> :w<cr>
+nnoremap <leader><C-S> :AutoSaveToggle<cr>
+
+" Open left menu files
+nnoremap <leader>nl :NERDTree<cr>
+nnoremap <leader>nh :NERDTreeClose<cr>
 
 
