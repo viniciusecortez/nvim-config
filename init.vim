@@ -1,6 +1,6 @@
-set hidden
-set number
-set mouse=a
+set hidden 
+set number 
+set mouse=a 
 set inccommand=split
 
 let mapleader="\<space>"
@@ -19,6 +19,7 @@ call plug#begin()
 	Plug 'roxma/nvim-yarp'
 	Plug 'dense-analysis/ale'
 	Plug 'jiangmiao/auto-pairs'
+	Plug 'tpope/vim-fugitive'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'preservim/nerdcommenter'
 	Plug 'brookhong/dbgpavim'
@@ -31,8 +32,8 @@ colorscheme gruvbox
 set background=dark
 
 " Adicionando vertical split :
-nnoremap <C-W>v :vsplit 
-nnoremap <C-W>s :split
+"nnoremap <C-W>v :vsplit 
+"nnoremap <C-W>s :split
 
 " Pesquisa :
 nnoremap <c-p> :Files<cr>
@@ -43,7 +44,6 @@ nnoremap <C-S> :w<cr>
 nnoremap <leader><C-S> :AutoSaveToggle<cr>
 
 " Open left menu files
-nnoremap <leader>nl :NERDTree<cr>
+nnoremap <leader>nl :NERDTreeRefreshRoot<cr>
 nnoremap <leader>nh :NERDTreeClose<cr>
-
 
